@@ -1,6 +1,6 @@
-package com.lenovo.wpc.dao;
+package com.learning.30s.dao;
 
-import com.lenovo.wpc.domain.Country;
+import com.learning.30s.domain.Country;
 
 import org.apache.ibatis.annotations.*;
 

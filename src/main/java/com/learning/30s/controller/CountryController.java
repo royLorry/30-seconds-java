@@ -1,7 +1,7 @@
-package com.lenovo.wpc.controller;
+package com.learning.30s.controller;
 
-import com.lenovo.wpc.domain.Country;
-import com.lenovo.wpc.service.CountryService;
+import com.learning.30s.domain.Country;
+import com.learning.30s.service.CountryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;

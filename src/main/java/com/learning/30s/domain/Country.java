@@ -1,4 +1,4 @@
-package com.lenovo.wpc.domain;
+package com.learning.30s.domain;
 
 /**
  * Country实体类

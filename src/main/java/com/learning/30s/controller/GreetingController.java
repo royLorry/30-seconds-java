@@ -1,8 +1,8 @@
-package com.lenovo.wpc.controller;
+package com.learning.30s.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.lenovo.wpc.service.Greeting;
+import com.learning.30s.service.Greeting;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

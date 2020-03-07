@@ -1,6 +1,6 @@
-package com.lenovo.wpc.service;
+package com.learning.30s.service;
 
-import com.lenovo.wpc.domain.Country;
+import com.learning.30s.domain.Country;
 
 /**
  * 国家业务逻辑接口类

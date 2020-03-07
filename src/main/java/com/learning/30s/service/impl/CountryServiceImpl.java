@@ -1,8 +1,8 @@
-package com.lenovo.wpc.service.impl;
+package com.learning.30s.service.impl;
 
-import com.lenovo.wpc.dao.CountryDao;
-import com.lenovo.wpc.domain.Country;
-import com.lenovo.wpc.service.CountryService;
+import com.learning.30s.dao.CountryDao;
+import com.learning.30s.domain.Country;
+import com.learning.30s.service.CountryService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
