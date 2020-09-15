@@ -1,7 +1,6 @@
-package com.learning.30s.dao;
+package com.learning.java.dao;
 
-import com.learning.30s.domain.Country;
-
+import com.learning.java.domain.Country;
 import org.apache.ibatis.annotations.*;
 
 

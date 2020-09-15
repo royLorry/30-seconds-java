@@ -1,9 +1,8 @@
-package com.learning.30s.service.impl;
+package com.learning.java.service.impl;
 
-import com.learning.30s.dao.CountryDao;
-import com.learning.30s.domain.Country;
-import com.learning.30s.service.CountryService;
-
+import com.learning.java.dao.CountryDao;
+import com.learning.java.domain.Country;
+import com.learning.java.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

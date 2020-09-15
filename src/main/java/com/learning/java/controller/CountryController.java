@@ -1,16 +1,11 @@
-package com.learning.30s.controller;
+package com.learning.java.controller;
 
-import com.learning.30s.domain.Country;
-import com.learning.30s.service.CountryService;
-
+import com.learning.java.domain.Country;
+import com.learning.java.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-
-
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Country 控制层

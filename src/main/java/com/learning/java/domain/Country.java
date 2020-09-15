@@ -1,4 +1,4 @@
-package com.learning.30s.domain;
+package com.learning.java.domain;
 
 /**
  * Country实体类

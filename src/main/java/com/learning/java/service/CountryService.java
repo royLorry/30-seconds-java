@@ -1,6 +1,7 @@
-package com.learning.30s.service;
+package com.learning.java.service;
 
-import com.learning.30s.domain.Country;
+import com.learning.java.domain.Country;
+
 
 /**
  * 国家业务逻辑接口类

@@ -1,12 +1,11 @@
-package com.learning.30s.controller;
+package com.learning.java.controller;
 
-import java.util.concurrent.atomic.AtomicLong;
-
-import com.learning.30s.service.Greeting;
-
+import com.learning.java.service.Greeting;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.atomic.AtomicLong;
 
 
 
