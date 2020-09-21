@@ -43,6 +43,9 @@ public class ArraySolution {
      * @return 所能获取的最大利润
      */
     public int maxProfit(int[] prices) {
+        for (int i = 0; i < prices.length; i++) {
+            
+        }
         return 0;
     }
 
