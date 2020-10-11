@@ -43,10 +43,28 @@ public class ArraySolution {
      * @return 所能获取的最大利润
      */
     public int maxProfit(int[] prices) {
-        for (int i = 0; i < prices.length; i++) {
-            
+        int maxProfit = 0;
+        int buyPoint = 0;
+        while (buyPoint <= prices.length - 1) {
+            int sellPoint = buyPoint + 1;
+            int profit = 0;
+            while (sellPoint < prices.length && prices[buyPoint] < prices[sellPoint]) {
+                int thisProfit = prices[sellPoint] - prices[buyPoint];
+                profit = profit > thisProfit ? profit : thisProfit;
+                if (sellPoint == prices.length - 1) {
+                    buyPoint = sellPoint;
+                    break;
+                }
+                if (prices[sellPoint] <= prices[sellPoint - 1] && prices[sellPoint] < prices[sellPoint + 1]) {
+                    buyPoint = sellPoint;
+                    break;
+                }
+                sellPoint++;
+            }
+            buyPoint = sellPoint;
+            maxProfit += profit;
         }
-        return 0;
+        return maxProfit;
     }
 
 }
