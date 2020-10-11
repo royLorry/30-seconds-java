@@ -50,13 +50,8 @@ public class ArraySolution {
             int profit = 0;
             while (sellPoint < prices.length && prices[buyPoint] < prices[sellPoint]) {
                 int thisProfit = prices[sellPoint] - prices[buyPoint];
-                profit = profit > thisProfit ? profit : thisProfit;
-                if (sellPoint == prices.length - 1) {
-                    buyPoint = sellPoint;
-                    break;
-                }
-                if (prices[sellPoint] <= prices[sellPoint - 1] && prices[sellPoint] < prices[sellPoint + 1]) {
-                    buyPoint = sellPoint;
+                profit = Math.max(profit, thisProfit);
+                if (sellPoint == prices.length - 1 || (prices[sellPoint] <= prices[sellPoint - 1] && prices[sellPoint] < prices[sellPoint + 1])) {
                     break;
                 }
                 sellPoint++;
