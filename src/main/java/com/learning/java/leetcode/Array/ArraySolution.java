@@ -1,5 +1,7 @@
 package com.learning.java.leetcode.Array;
 
+import java.util.LinkedList;
+
 public class ArraySolution {
 
     /**
@@ -74,7 +76,20 @@ public class ArraySolution {
      * @param k 将数组中的元素向右移动 k 个位置，其中 k 是非负数
      */
     public void rotate(int[] nums, int k) {
-        
+        if (nums.length == 0) {
+            return;
+        }
+        LinkedList<Integer> list = new LinkedList<>();
+        // 取余数是一轮移动的位数
+        k = k % nums.length;
+        // 数组尾部k个数放入队列
+        for (int i = k; i > 0; i--) {
+            list.add(nums[nums.length - i]);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            list.add(nums[i]);
+            nums[i] = list.pop();
+        }
     }
 
 }
