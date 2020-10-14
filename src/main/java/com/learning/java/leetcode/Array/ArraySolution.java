@@ -1,5 +1,6 @@
 package com.learning.java.leetcode.Array;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -112,6 +113,23 @@ public class ArraySolution {
             }
         }
         return false;
+    }
+
+    /**
+     *
+     * @param nums 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次
+     * @return 找出那个只出现了一次的元素
+     */
+    public int singleNumber(int[] nums) {
+        Arrays.sort(nums);
+        int i = 0;
+        while (i < nums.length - 1) {
+            if (nums[i] != nums[i + 1]) {
+                return nums[i];
+            }
+            i += 2;
+        }
+        return nums[i];
     }
 
 }
