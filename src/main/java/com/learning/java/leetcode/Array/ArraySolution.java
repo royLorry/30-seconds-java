@@ -9,9 +9,9 @@ public class ArraySolution {
 
     /**
      * 给定 nums = [0,0,1,1,1,2,2,3,3,4],
-     *
+     * <p>
      * 函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
-     *
+     * <p>
      * 你不需要考虑数组中超出新长度后面的元素。
      *
      * @param nums 排序后的整型数组
@@ -76,7 +76,7 @@ public class ArraySolution {
      * 向右旋转 3 步: [5,6,7,1,2,3,4]
      *
      * @param nums 给定一个数组
-     * @param k 将数组中的元素向右移动 k 个位置，其中 k 是非负数
+     * @param k    将数组中的元素向右移动 k 个位置，其中 k 是非负数
      */
     public void rotate(int[] nums, int k) {
         if (nums.length == 0) {
@@ -116,7 +116,6 @@ public class ArraySolution {
     }
 
     /**
-     *
      * @param nums 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次
      * @return 找出那个只出现了一次的元素
      */
@@ -131,5 +130,47 @@ public class ArraySolution {
         }
         return nums[i];
     }
+
+    /**
+     * @param nums1 给定两个数组
+     * @param nums2 给定两个数组
+     * @return 返回它们的交集
+     */
+    public int[] intersect(int[] nums1, int[] nums2) {
+        int[] intersectArray;
+        // 选取长度小的那个
+        int[] longerArray = nums1.length > nums2.length ? nums1 : nums2;
+        int[] shorterArray = nums1.length > nums2.length ? nums2 : nums1;
+
+        
+
+
+        return null;
+    }
+
+    /**
+     *
+     * 最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+     * 你可以假设除了整数 0 之外，这个整数不会以零开头。
+     *
+     * @param digits 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
+     * @return 返回加一后的数组
+     */
+    public int[] plusOne(int[] digits) {
+        for (int i = digits.length - 1; i >= 0; i--) {
+            int sum = digits[i] + 1;
+            if (sum == 10) {
+                digits[i] = 0;
+            } else {
+                digits[i] = sum;
+                return digits;
+            }
+        }
+        int[] result =  new int[digits.length + 1];
+        System.arraycopy(digits, 0, result, 1, digits.length);
+        result[0] = 1;
+        return result;
+    }
+
 
 }
