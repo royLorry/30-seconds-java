@@ -142,14 +142,11 @@ public class ArraySolution {
         int[] longerArray = nums1.length > nums2.length ? nums1 : nums2;
         int[] shorterArray = nums1.length > nums2.length ? nums2 : nums1;
 
-        
-
 
         return null;
     }
 
     /**
-     *
      * 最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
      * 你可以假设除了整数 0 之外，这个整数不会以零开头。
      *
@@ -166,10 +163,28 @@ public class ArraySolution {
                 return digits;
             }
         }
-        int[] result =  new int[digits.length + 1];
+        int[] result = new int[digits.length + 1];
         System.arraycopy(digits, 0, result, 1, digits.length);
         result[0] = 1;
         return result;
+    }
+
+    /**
+     * @param nums 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+     */
+    public void moveZeroes(int[] nums) {
+        // 记住当前有几个0，则为非0向前需要移动的位数
+        int zeroNum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                zeroNum++;
+            } else {
+                // 交换
+                int temp = nums[i];
+                nums[i] = nums[i - zeroNum];
+                nums[i - zeroNum] = temp;
+            }
+        }
     }
 
 
