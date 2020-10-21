@@ -210,5 +210,47 @@ public class ArraySolution {
         return null;
     }
 
+    public boolean isValidSudoku(char[][] board) {
+        HashSet<Character>[] lineSet = new HashSet[9];
+        HashSet<Character>[] verticalSet = new HashSet[9];
+        HashSet<Character>[][] blockSet = new HashSet[3][3];
+        for (int i = 0; i < lineSet.length; i++) {
+            lineSet[i] = new HashSet<>(20);
+        }
+        for (int i = 0; i < verticalSet.length; i++) {
+            verticalSet[i] = new HashSet<>(20);
+        }
+        for (int i = 0; i < blockSet.length; i++) {
+            for (int j = 0; j < blockSet[i].length; j++) {
+                blockSet[i][j] = new HashSet<>(20);
+            }
+        }
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                char currentChar = board[i][j];
+                if (currentChar != '.') {
+                    if (lineSet[i].contains(currentChar)) {
+                        return false;
+                    } else {
+                        lineSet[i].add(currentChar);
+                    }
+
+                    if (verticalSet[j].contains(currentChar)) {
+                        return false;
+                    } else {
+                        verticalSet[j].add(currentChar);
+                    }
+
+                    if (blockSet[i / 3][j / 3].contains(currentChar)) {
+                        return false;
+                    } else {
+                        blockSet[i / 3][j / 3].add(currentChar);
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
 
 }
