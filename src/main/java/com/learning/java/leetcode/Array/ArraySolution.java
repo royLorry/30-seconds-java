@@ -210,6 +210,11 @@ public class ArraySolution {
         return null;
     }
 
+    /**
+     *
+     * @param board 一个 9x9 的数独
+     * @return 判断是否有效
+     */
     public boolean isValidSudoku(char[][] board) {
         HashSet<Character>[] lineSet = new HashSet[9];
         HashSet<Character>[] verticalSet = new HashSet[9];
@@ -250,6 +255,18 @@ public class ArraySolution {
             }
         }
         return true;
+    }
+
+
+    public void rotate(int[][] matrix) {
+        int sideLength = matrix.length;
+        for (int i = 0; i < sideLength / 2; i++) {
+            int j = i;
+            while (i + j < sideLength - 1 - i) {
+                int targetI = 
+                j++;
+            }
+        }
     }
 
 
