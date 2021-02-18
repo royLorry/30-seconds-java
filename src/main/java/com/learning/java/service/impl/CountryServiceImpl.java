@@ -1,9 +1,8 @@
 package com.learning.java.service.impl;
 
-import com.learning.java.dao.CountryDao;
+import com.learning.java.aop.annotation.Compare;
 import com.learning.java.domain.Country;
 import com.learning.java.service.CountryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,11 +14,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class CountryServiceImpl implements CountryService {
     
-    @Autowired
-    private CountryDao countryDao;
-
+    // @Autowired
+    // private CountryDao countryDao;
+    @Compare(type = "Y")
     public Country findCountryByName(String countryName) {
-        return countryDao.findByName(countryName);
+        return new Country(1L, countryName);
     }
 
 }

@@ -1,10 +1,15 @@
 package com.learning.java.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 /**
  * Country实体类
  *
  * 
  */
+@Data
+@AllArgsConstructor
 public class Country {
 
     private Long id;
