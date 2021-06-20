@@ -1,4 +1,4 @@
-package com.learning.java.leetcode.Array;
+package com.learning.java.leetcode.array;
 
 import java.util.*;
 
