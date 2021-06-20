@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework</groupId>
-    <artifactId>gs-rest-service</artifactId>
+    <artifactId>thirty-seconds-java</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
 
-	<name>springboot-my-test</name>
+	<name>try-your-best</name>
 	<description>Try your best</description>
 
     <!-- Spring Boot 启动父依赖 -->
